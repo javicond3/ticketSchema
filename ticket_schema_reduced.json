@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://smart-data-models.github.io/dataModel.Shop/Ticket/schema.json",
+  "title": "Smart Data models - Ticket schema",
+  "description": "Represent a generic ticket",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Ticket"
+          ],
+          "description": "Property. NGSI Entity type. It has to be Ticket"
+        },
+        "ticketType": {
+          "type": "string",
+          "enum": [
+            "Request",
+            "Response",
+            "other"
+          ],
+          "description": "Property. Model:'http://schema.org/Text'. Type of ticket"
+        },
+        "priceCurrency": {
+          "type": "string",
+          "description": "Property. Model:'https://schema.org/priceCurrency'. Price currency of the purchase"
+        },
+        "totalPrice": {
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/totalPrice'. Total price of the purchase"
+        },
+        "dateIssued": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'http://schema.org/DateTime'. Date when the purchase was taken"
+        },
+        "hasProducts": {
+          "type": "array",
+          "description": "Relationship. Array of URIs related to the products of the ticket.",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                "description": "Property. Identifier format of any NGSI entity"
+              },
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "Property. Identifier format of any NGSI entity"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type"
+  ]
+}

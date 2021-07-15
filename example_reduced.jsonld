@@ -1,0 +1,15 @@
+{
+  "id": "urn:ngsi-ld:Ticket1",
+  "type": "Ticket",
+  "ticketType": "Response",
+  "priceCurrency": "EUR",
+  "totalPrice": 10,
+  "dateIssued": "2021-06-15T08:43:22Z",
+  "hasProducts": [
+    "urn:ngsi-ld:Product1",
+    "urn:ngsi-ld:Product2"
+  ],
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld"
+  ]
+}

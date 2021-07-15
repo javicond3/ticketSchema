@@ -38,73 +38,10 @@
           "type": "number",
           "description": "Property. Model:'https://schema.org/totalPrice'. Total price of the purchase"
         },
-        "totalPaid": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Total monay paid"
-        },
-        "totalReturned": {
-          "type": "number",
-          "description": "Property. Model:'https://schema.org/Number'. Total monay returned"
-        },
-        "paymentMethod": {
-          "type": "string",
-          "enum": [
-            "Cash",
-            "CreditCard",
-            "CryptoCurrency",
-            "other"
-          ],
-          "description": "Property. Model:'http://schema.org/Text'. Method of payment of the purchase"
-        },
         "dateIssued": {
           "type": "string",
           "format": "date-time",
           "description": "Property. Model:'http://schema.org/DateTime'. Date when the purchase was taken"
-        },
-        "hasStore": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
-            },
-            {
-              "type": "string",
-              "format": "uri"
-            }
-          ],
-          "description": "Relationship. Reference to the store model entity"
-        },
-        "hasClient": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
-            },
-            {
-              "type": "string",
-              "format": "uri"
-            }
-          ],
-          "description": "Relationship. Reference to the person model entity"
-        },
-        "hasVendor": {
-          "anyOf": [
-            {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
-            },
-            {
-              "type": "string",
-              "format": "uri"
-            }
-          ],
-          "description": "Relationship. Reference to the person model entity"
         },
         "hasProducts": {
           "type": "array",

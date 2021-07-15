@@ -55,76 +55,76 @@
             "other"
           ],
           "description": "Property. Model:'http://schema.org/Text'. Method of payment of the purchase"
-        }
-      },
-      "dateIssued": {
-        "type": "string",
-        "format": "date-time",
-        "description": "Property. Model:'http://schema.org/DateTime'. Date when the purchase was taken"
-      },
-      "hasStore": {
-        "anyOf": [
-          {
-            "type": "string",
-            "minLength": 1,
-            "maxLength": 256,
-            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
-          },
-          {
-            "type": "string",
-            "format": "uri"
-          }
-        ],
-        "description": "Relationship. Reference to the store model entity"
-      },
-      "hasClient": {
-        "anyOf": [
-          {
-            "type": "string",
-            "minLength": 1,
-            "maxLength": 256,
-            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
-          },
-          {
-            "type": "string",
-            "format": "uri"
-          }
-        ],
-        "description": "Relationship. Reference to the person model entity"
-      },
-      "hasVendor": {
-        "anyOf": [
-          {
-            "type": "string",
-            "minLength": 1,
-            "maxLength": 256,
-            "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
-          },
-          {
-            "type": "string",
-            "format": "uri"
-          }
-        ],
-        "description": "Relationship. Reference to the person model entity"
-      },
-      "hasProducts": {
-        "type": "array",
-        "description": "Relationship. Array of URIs related to the products of the ticket.",
-        "items": {
+        },
+        "dateIssued": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Property. Model:'http://schema.org/DateTime'. Date when the purchase was taken"
+        },
+        "hasStore": {
           "anyOf": [
             {
               "type": "string",
               "minLength": 1,
               "maxLength": 256,
-              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
-              "description": "Property. Identifier format of any NGSI entity"
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
             },
             {
               "type": "string",
-              "format": "uri",
-              "description": "Property. Identifier format of any NGSI entity"
+              "format": "uri"
             }
-          ]
+          ],
+          "description": "Relationship. Reference to the store model entity"
+        },
+        "hasClient": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
+            },
+            {
+              "type": "string",
+              "format": "uri"
+            }
+          ],
+          "description": "Relationship. Reference to the person model entity"
+        },
+        "hasVendor": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 256,
+              "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
+            },
+            {
+              "type": "string",
+              "format": "uri"
+            }
+          ],
+          "description": "Relationship. Reference to the person model entity"
+        },
+        "hasProducts": {
+          "type": "array",
+          "description": "Relationship. Array of URIs related to the products of the ticket.",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 256,
+                "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+                "description": "Property. Identifier format of any NGSI entity"
+              },
+              {
+                "type": "string",
+                "format": "uri",
+                "description": "Property. Identifier format of any NGSI entity"
+              }
+            ]
+          }
         }
       }
     }
@@ -133,4 +133,5 @@
     "id",
     "type"
   ]
+}
 }

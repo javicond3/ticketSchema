@@ -1,0 +1,20 @@
+{
+  "id": "urn:ngsi-ld:Ticket1",
+  "type": "Ticket",
+  "ticketType": "Response",
+  "priceCurrency": "EUR",
+  "totalPrice": 10,
+  "totalPaid": 12,
+  "totalReturned": 2,
+  "paymentMethod": "Cash",
+  "hasStore": "urn:ngsi-ld:Store1",
+  "hasClient": "urn:ngsi-ld:Client1",
+  "hasVendor": "urn:ngsi-ld:Vendor1",
+  "hasProducts": [
+    "urn:ngsi-ld:Product1",
+    "urn:ngsi-ld:Product2"
+  ],
+  "@context": [
+    "https://smartdatamodels.org/context.jsonld"
+  ]
+}
